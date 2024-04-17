@@ -1,0 +1,42 @@
+<div class="card flex justify-content-center">
+    <br><br>
+    <p-button label="FindUser" icon="pi pi-check" (click)="getbyid(gymId)" iconPos="right"></p-button>
+    <br><br>
+    <span class="p-float-label">
+        <input pInputText id="id" placeholder="Enter ID" [(ngModel)]="gymId" name="gymId" />
+        <label for="id">Id</label>
+    </span>
+    <br><br>
+    <span class="p-float-label">
+        <input pInputText id="name" placeholder="Enter name" [(ngModel)]="updatedData.name" name="name" />
+        <label for="name">Name</label>
+    </span>
+    <br><br>
+    <span class="p-float-label">
+        <input pInputText id="desc" placeholder="Enter description" [(ngModel)]="updatedData.description" name="desc"/>
+        <label for="desc">Description</label>
+    </span>
+    <br><br>
+    <span class="p-float-label">
+        <input pInputText id="location" placeholder="Enter location" [(ngModel)]="updatedData.location" name="location" />
+        <label for="location">Location</label>
+    </span>
+    <br><br>
+    <span class="p-float-label">
+        <input type="text" pInputText id="rating" placeholder="Enter rating" [(ngModel)]="updatedData.rating" name="rating" />
+        <label for="rating">Rating</label>
+    </span>
+    <br>
+    <p-button label="Submit" icon="pi pi-check" (click)="setGym()" iconPos="right"></p-button>
+    
+    @if(isShowRes){
+        <h1>Id: {{gymId}}</h1>
+        <h1>Name: {{resultData.name}}</h1>
+        <h1>Description: {{resultData.description}}</h1>
+        <h1>Location: {{resultData.location}}</h1>
+        <h1>Rating: {{resultData.rating}}</h1>
+    }
+    @else if(!isUpdated){
+        <h1>Malumotlar yangilandi</h1>
+    }
+</div>

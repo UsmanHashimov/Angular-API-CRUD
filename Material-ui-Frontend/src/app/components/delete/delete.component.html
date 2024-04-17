@@ -1,0 +1,14 @@
+@if(!isDeleted){
+  
+    <mat-form-field>
+        <mat-label>Id</mat-label>
+        <input matInput type="number" class="form-control" [(ngModel)]="gymId">
+    </mat-form-field>
+
+
+    <button  mat-flat-button class="btn btn-danger" (click)="delete()" color="primary">Delete User</button>
+
+
+} @else {
+    <h1>Ma'lumotlar muvaffaqiyatli o'chirildi</h1>
+}

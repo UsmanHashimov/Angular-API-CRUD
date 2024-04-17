@@ -1,0 +1,29 @@
+
+@if(!isUpdated){
+    <mat-form-field>
+        <mat-label>Id</mat-label>
+        <input matInput [(ngModel)]="gymId">
+    </mat-form-field>
+    <br>
+    <button  mat-flat-button id="id" color="primary" (click)="getbyid(gymId)">Find Gym</button>
+}
+@else{
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput id="name" placeholder="Enter name" required value="{{resultData.name}}" [(ngModel)]="updatedData.name" name="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput id="description" placeholder="Enter description"required value="{{resultData.description}}" [(ngModel)]="updatedData.description" name="description">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Location</mat-label>
+        <input type="text" matInput id="location" placeholder="Enter location" required value="{{updatedData.location}}" [(ngModel)]="updatedData.location" name="location">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Rating</mat-label>
+        <input type="text" matInput id="rating" placeholder="Enter location" required value="{{updatedData.rating}}" [(ngModel)]="updatedData.rating" name="rating">
+    </mat-form-field>
+    <button type="submit" mat-flat-button (click)="setGym()" color="primary">Submit</button>
+
+}

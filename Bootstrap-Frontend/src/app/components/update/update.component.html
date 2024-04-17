@@ -1,0 +1,62 @@
+<form class="submit-form">
+@if(!isUpdated){
+    <div class="form-group">
+        <label for="id">ID</label>
+        <div class="d-flex">
+            <input type="number" class="form-control" id="id" placeholder="enter ID" [(ngModel)]="gymId" name="id">
+            <button class="btn btn-success" (click)="getbyid(gymId)">Search</button>
+        </div>
+    </div>
+}
+@else if(isUpdated) {
+    <div class="form-group">
+        <label for="id">ID</label>
+        <div class="d-flex">
+            <input type="text" class="form-control" id="id" placeholder="enter ID" [(ngModel)]="gymId" name="id">
+            <button class="btn btn-success " (click)="getbyid(gymId)">Search</button>
+        </div>
+    </div>
+    <table class="table">
+      <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Location</th>
+            <th scope="col">Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{gymId}}</th>
+            <td>{{resultData.name}}</td>
+            <td>{{resultData.description}}</td>
+            <td>{{resultData.location}}</td>
+            <td>{{resultData.rating}}</td>
+          </tr>
+        </tbody>
+  </table>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" [(ngModel)]="updatedData.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Description</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter description" [(ngModel)]="updatedData.description" name="email">
+    </div>
+    <div class="form-group">
+      <label for="tckid">Location</label>
+      <input type="text" class="form-control" id="tckid" placeholder="Enter location" [(ngModel)]="updatedData.location" name="tckid">
+    </div>
+    <div class="form-group">
+      <label for="tckid">Rating</label>
+      <input type="text" class="form-control" id="tckid" placeholder="Enter rating" [(ngModel)]="updatedData.rating" name="tckid">
+    </div>
+    
+
+    <br>
+    <button type="submit" class="btn btn-primary" (click)="setGym()">Submit</button> 
+}
+</form>
+

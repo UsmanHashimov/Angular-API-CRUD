@@ -1,0 +1,51 @@
+<div class="container mt-5" style="width: 800px;">
+    @if (!isSubmitted) {
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Get User By ID</h5>
+        <form>
+          <div class="mb-3">
+            <label for="userIdInput" class="form-label">User ID:</label>
+            <input type="number" class="form-control" id="userIdInput" [(ngModel)]="userId" name="userId" placeholder="Enter User ID" required>
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="getbyid(userId)">Submit</button>
+        </form>
+      </div>
+    </div>
+    }
+    @else if(isSubmitted){
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Get User By ID</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="userIdInput" class="form-label">User ID:</label>
+                  <input type="number" class="form-control" id="userIdInput" [(ngModel)]="userId" name="userId" placeholder="Enter User ID" required>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="getbyid(userId)">Submit</button>
+              </form>
+            </div>
+          </div>
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">{{resultData.id}}</th>
+                  <td>{{resultData.name}}</td>
+                  <td>{{resultData.description}}</td>
+                  <td>{{resultData.location}}</td>
+                  <td>{{resultData.rating}}</td>
+                </tr>
+              </tbody>
+        </table>
+    }
+</div>
+  
