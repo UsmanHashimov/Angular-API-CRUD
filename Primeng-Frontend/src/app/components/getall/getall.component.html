@@ -1,0 +1,22 @@
+<p-table [value]="gyms" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Rating</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-gym>
+    
+          <tr>
+              <td>{{gym.id}}</td>
+              <td>{{gym.name}}</td>
+              <td>{{gym.description}}</td>
+              <td>{{gym.location}}</td>
+              <td>{{gym.rating}}</td>
+            </tr>
+       
+    </ng-template>
+</p-table>

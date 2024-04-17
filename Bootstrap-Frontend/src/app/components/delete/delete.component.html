@@ -1,0 +1,21 @@
+<form class="submit-form">
+    @if (!isDeleted) {
+        <div class="form-group">
+            <label for="id">ID</label>
+            <div class="d-flex">
+                <input type="text" class="form-control" id="id" placeholder="enter ID" [(ngModel)]="gymId" name="id">
+                <button class="btn btn-danger " (click)="delete()">Delete</button>
+            </div>
+        </div>
+    }
+    @else {
+        <div class="form-group">
+            <label for="id">ID</label>
+            <div class="d-flex">
+                <input type="text" class="form-control" id="id" placeholder="enter ID" [(ngModel)]="gymId" name="id">
+                <button class="btn btn-danger " (click)="delete()">Delete</button>
+            </div>
+        </div>
+        <h1>Ma'lumot o'chirildi</h1>
+    }
+</form>

@@ -1,0 +1,13 @@
+<br>
+<br>
+<span class="p-float-label">
+    <input pInputText id="id" placeholder="Enter ID" [(ngModel)]="gymId" name="myId" />
+    <label for="id">Id</label>
+</span>
+<p-button label="Find Gym" (click)="getbyid(gymId)">search</p-button>
+
+<h1>Id: {{resultData.id}}</h1>
+<h1>FullName: {{resultData.name}}</h1>
+<h1>Email: {{resultData.description}}</h1>
+<h1>Role: {{resultData.location}}</h1>
+<h1>Role: {{resultData.rating}}</h1>

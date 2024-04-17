@@ -1,0 +1,27 @@
+<form class="submit-form">
+    @if(!isSubmitted){
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" [(ngModel)]="setValue.name" name="name">
+        </div>
+    
+        <div class="form-group">
+          <label for="desc">Description</label>
+          <input type="text" class="form-control" id="desc" placeholder="Enter description" [(ngModel)]="setValue.description" name="desc">
+        </div>
+        
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Enter location" required [(ngModel)]="setValue.location" name="location">
+        </div>
+
+        <div class="form-group">
+          <label for="rating">Rating</label>
+          <input type="text" class="form-control" id="rating" placeholder="nter rating" required [(ngModel)]="setValue.rating" name="rating">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" (click)="create(setValue)">Submit</button> 
+    } @else {
+        <h1>Ma'lumotlar Saqlandi</h1>
+    }
+</form>

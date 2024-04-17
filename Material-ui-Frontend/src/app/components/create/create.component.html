@@ -1,0 +1,22 @@
+@if(!isSubmitted){
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="setValue.name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput [(ngModel)]="setValue.description">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Location</mat-label>
+        <input matInput [(ngModel)]="setValue.location">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Rating</mat-label>
+        <input type="text" matInput [(ngModel)]="setValue.rating">
+    </mat-form-field>
+    <button type="submit" mat-flat-button (click)="setGym()" color="primary">Submit</button>
+}
+@else{
+    <h1>Malumotlar yangilandi</h1>
+}
