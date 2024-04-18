@@ -1,20 +1,21 @@
-
-@if(!isDeleted){
+<div class="flex">
+  @if(!isDeleted){
     <br>
     <br>
     <br>
-  <span class="p-float-label">
+    <span class="p-float-label">
       <input pInputText id="id" [(ngModel)]="gymId" />
       <label for="id">Id</label>
-  </span>
+    </span>
   <br>
   <br>
   <br>
  
   <p-button label="Submit" icon="pi pi-check" (click)="delete()" iconPos="right"></p-button>
-
-
+  
+  
 
 } @else {
   <h1>Ma'lumotlar muvaffaqiyatli o'chirildi</h1>
 }
+</div>
